@@ -10,15 +10,13 @@ export default {
         "purple-light": "#E6E6FA",
         "purple-dark": "#6D4982",
       },
-      backgroundImage: () => ({
-        "gradient-yellowred":
-          "linear-gradient(90deg, #FF616A 0%, #FFC837 100%)",
-        "mobile-home": "url('./assets/HomePageGraphic.png')",
-      }),
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
+      boxShadow: {
+        'opaque': '.5rem .5rem black',
+      }
     },
     screens: {
       xs: "480px",

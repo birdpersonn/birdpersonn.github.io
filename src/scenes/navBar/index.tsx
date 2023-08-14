@@ -2,7 +2,7 @@ import useMediaQuery from "@/hooks/useMediaQuery"
 import { SelectedPage } from "@/shared/types"
 import Link from "./Link";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { HiMenu } from "react-icons/hi";
+import { HiMenu, HiX } from "react-icons/hi";
 import { useState } from "react";
 
 type Props = {
@@ -16,11 +16,11 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
 
     return (
         <nav>
-            <div className="flex items-center justify-between fixed top-0 z-30 w-full px-2 py-6">
+            <div className="flex items-center justify-between fixed top-0 z-30 w-full px-8 py-6">
 
                 {/* NAME */}
                 <AnchorLink
-                    className="pl-4 pr-12"
+                    className="p-2 font-bold border-2 border-black shadow-opaque"
                     href={"#home"}
                     onClick={() => setSelectedPage(SelectedPage.Home)}
                 >
@@ -31,7 +31,7 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
 
                 {isAboveMediumScreens ? (
                     /* LINKS AND CTA */
-                    < div className="flex items-center justify-between w-full">
+                    < div className="flex items-center justify-between w-full px-8">
                         {/* LINKS */}
                         <div className="flex justify-between items-center gap-8">
                             <Link
@@ -59,7 +59,7 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
                         {/* CTA */}
                         <div>
                             <button
-                                className="rounded-md px-6 py-1 duration-300 hover:bg-purple-dark hover:text-white"
+                                className="border-2 border-black shadow-opaque px-6 py-1 duration-300 hover:text-white"
                             >
                                 Let's Connect!
                             </button>
@@ -72,6 +72,41 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
                         <HiMenu className="w-6 h-6" />
                     </button>)}
             </div>
+
+            {/* MOBILE MENU MODAL */}
+            {!isAboveMediumScreens && isMenuToggled && (
+                <div className="fixed right-0 top-5 z-40 w-3/5 bg-purple-light drop-shadow-2xl rounded-md">
+                    <div className="flex justify-end py-2 px-6">
+                        <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                            <HiX className="w-6 h-6" />
+                        </button>
+                    </div>
+
+                    {/* MENU ITEMS */}
+                    <div className="flex flex-col items-end justify-center m-4 gap-8 text-2xl">
+                        <Link
+                            page="Skills"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                        />
+                        <Link
+                            page="Projects"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                        />
+                        <Link
+                            page="Experience"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                        />
+                        <Link
+                            page="Contact Me"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                        />
+                    </div>
+                </div>
+            )}
         </nav >
     )
 }

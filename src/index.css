@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,8 +9,7 @@ body,
 .app {
     height: 100%;
     width: 100%;
-    background-color: #E6E6FA;
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
+    background-color: #fff;
+    font-family: 'Bricolage Grotesque', sans-serif;
     @apply text-purple-dark;
 }
