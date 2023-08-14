@@ -16,11 +16,13 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
 
     return (
         <nav>
-            <div className="flex items-center justify-between fixed top-0 z-30 w-full px-8 py-6">
+            <div className="fixed flex items-center justify-between top-0 z-30 w-full 
+                px-8 pt-4 pb-6 border-b-2 border-black">
 
                 {/* NAME */}
                 <AnchorLink
-                    className="p-2 font-bold border-2 border-black shadow-opaque"
+                    className="p-2 font-bold border-2 border-black shadow-opaque 
+                        transition duration-300 hover:shadow-none hover:text-black"
                     href={"#home"}
                     onClick={() => setSelectedPage(SelectedPage.Home)}
                 >
@@ -49,17 +51,13 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
                             />
-                            <Link
-                                page="Contact Me"
-                                selectedPage={selectedPage}
-                                setSelectedPage={setSelectedPage}
-                            />
                         </div>
 
                         {/* CTA */}
                         <div>
                             <button
-                                className="border-2 border-black shadow-opaque px-6 py-1 duration-300 hover:text-white"
+                                className="border-2 border-black shadow-opaque px-6 py-1 
+                                    transition duration-300 hover:shadow-none hover:text-black"
                             >
                                 Let's Connect!
                             </button>
