@@ -17,7 +17,7 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
     return (
         <nav>
             <div className="fixed flex items-center justify-between top-0 z-30 w-full 
-                px-8 pt-4 pb-6 border-b-2 border-black">
+                px-2 md:px-8 pt-4 pb-6 border-b-2 border-black bg-white">
 
                 {/* NAME */}
                 <AnchorLink
@@ -54,7 +54,12 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
                         </div>
 
                         {/* CTA */}
-                        <div>
+                        <div className="flex justify-between items-center gap-8">
+                            <Link
+                                page="Resume"
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />
                             <button
                                 className="border-2 border-black shadow-opaque px-6 py-1 
                                     transition duration-300 hover:shadow-none hover:text-black"

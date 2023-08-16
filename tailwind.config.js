@@ -9,6 +9,8 @@ export default {
       colors: {
         "purple-light": "#E6E6FA",
         "purple-dark": "#6D4982",
+        "cat-purple": "#e2e1ef",
+        "accent-orange": "#ff6f00"
       },
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
