@@ -20,7 +20,7 @@ const index = ({ setSelectedPage }: Props) => {
                 className="flex w-full flex-col md:flex-row justify-center gap-16 items-center"
                 onViewportEnter={() => setSelectedPage(SelectedPage.Skills)}
             >
-                <div className="flex flex-col border-2 border-black p-4 bg-white text-4xl justify-center items-start">
+                <div className="flex flex-col border-2 w-3/4 md:w-1/4 border-black p-4 bg-white text-4xl justify-center items-start">
                     <div className="flex gap-4 justify-center items-center">
                         <SiJavascript className="w-6 h-6" />
                         javascript
@@ -42,7 +42,7 @@ const index = ({ setSelectedPage }: Props) => {
                         css3
                     </div>
                 </div>
-                <div className="flex flex-col justify-center items-end border-2 border-black p-4 bg-white text-4xl">
+                <div className="flex flex-col justify-center w-3/4 md:w-1/4 items-end border-2 border-black p-4 bg-white text-4xl">
                     <div className="flex gap-4 justify-center items-center">
                         tailwind
                         <SiTailwindcss className="w-6 h-6" />
