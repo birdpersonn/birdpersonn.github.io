@@ -29,11 +29,11 @@ const index = ({ setSelectedPage }: Props) => {
                     variants={{
                         hidden: {
                             opacity: 0,
-                            y: 100
+                            x: -100
                         },
                         visible: {
                             opacity: 1,
-                            y: 0
+                            x: 0
                         }
                     }}
                 >
@@ -63,15 +63,15 @@ const index = ({ setSelectedPage }: Props) => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: false, amount: 0.1 }}
-                    transition={{ delay: .2, duration: .6 }}
+                    transition={{ duration: .6 }}
                     variants={{
                         hidden: {
                             opacity: 0,
-                            y: 100
+                            x: 100
                         },
                         visible: {
                             opacity: 1,
-                            y: 0
+                            x: 0
                         }
                     }}
                 >

@@ -25,11 +25,11 @@ const index = ({ setSelectedPage }: Props) => {
                     variants={{
                         hidden: {
                             opacity: 0,
-                            x: -50
+                            y: -50
                         },
                         visible: {
                             opacity: 1,
-                            x: 0
+                            y: 0
                         }
                     }}
                 >
