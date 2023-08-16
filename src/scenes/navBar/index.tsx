@@ -78,7 +78,8 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
 
             {/* MOBILE MENU MODAL */}
             {!isAboveMediumScreens && isMenuToggled && (
-                <div className="fixed right-0 top-5 z-40 w-3/5 bg-purple-light drop-shadow-2xl rounded-md">
+                <div className="fixed right-0 top-5 z-40 w-48 bg-purple-light shadow-xl
+                    border-black border-2">
                     <div className="flex justify-end py-2 px-6">
                         <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
                             <HiX className="w-6 h-6" />
