@@ -1,6 +1,6 @@
 import { SelectedPage } from "@/shared/types";
 import { motion } from 'framer-motion';
-import CatDevImage from '@/assets/catDeveloper.jpg';
+import CatDevImage from '@/assets/catDeveloper.png';
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;

@@ -24,7 +24,7 @@ const index = ({ setSelectedPage }: Props) => {
                     className="flex flex-col border-2 w-3/4 md:w-1/4 border-black p-4 bg-white text-4xl justify-center items-start"
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.5 }}
+                    viewport={{ once: false, amount: 0.5 }}
                     transition={{ duration: .6 }}
                     variants={{
                         hidden: {
@@ -62,7 +62,7 @@ const index = ({ setSelectedPage }: Props) => {
                     className="flex flex-col justify-center w-3/4 md:w-1/4 items-end border-2 border-black p-4 bg-white text-4xl"
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: false, amount: 0.5 }}
+                    viewport={{ once: false, amount: 0.1 }}
                     transition={{ delay: .2, duration: .6 }}
                     variants={{
                         hidden: {

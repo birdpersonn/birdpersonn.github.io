@@ -60,12 +60,14 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
                             />
-                            <button
+                            <AnchorLink
                                 className="border-2 border-black shadow-opaque px-6 py-1 text-xl 
                                     transition duration-300 hover:shadow-none hover:text-black"
+                                href="#contactme"
+                                onClick={() => setSelectedPage(SelectedPage.ContactMe)}
                             >
                                 Let's Connect!
-                            </button>
+                            </AnchorLink>
                         </div>
                     </div>) : (
                     <button
