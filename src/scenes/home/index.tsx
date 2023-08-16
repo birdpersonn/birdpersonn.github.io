@@ -10,7 +10,7 @@ const index = ({ setSelectedPage }: Props) => {
     return (
         <section
             id="home"
-            className="flex bg-cat-purple py-28 md:h-full md:align-middle"
+            className="flex bg-cat-purple pt-28 md:py-0 md:h-full"
         >
             <motion.div
                 className="flex flex-col md:flex-row justify-center items-center items-between align-middle"
