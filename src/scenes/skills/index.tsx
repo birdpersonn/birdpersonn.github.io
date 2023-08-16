@@ -20,7 +20,23 @@ const index = ({ setSelectedPage }: Props) => {
                 className="flex w-full flex-col md:flex-row justify-center gap-16 items-center"
                 onViewportEnter={() => setSelectedPage(SelectedPage.Skills)}
             >
-                <div className="flex flex-col border-2 w-3/4 md:w-1/4 border-black p-4 bg-white text-4xl justify-center items-start">
+                <motion.div
+                    className="flex flex-col border-2 w-3/4 md:w-1/4 border-black p-4 bg-white text-4xl justify-center items-start"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: .6 }}
+                    variants={{
+                        hidden: {
+                            opacity: 0,
+                            y: 100
+                        },
+                        visible: {
+                            opacity: 1,
+                            y: 0
+                        }
+                    }}
+                >
                     <div className="flex gap-4 justify-center items-center">
                         <SiJavascript className="w-6 h-6" />
                         javascript
@@ -41,8 +57,24 @@ const index = ({ setSelectedPage }: Props) => {
                         <SiCss3 className="w-6 h-6" />
                         css3
                     </div>
-                </div>
-                <div className="flex flex-col justify-center w-3/4 md:w-1/4 items-end border-2 border-black p-4 bg-white text-4xl">
+                </motion.div>
+                <motion.div
+                    className="flex flex-col justify-center w-3/4 md:w-1/4 items-end border-2 border-black p-4 bg-white text-4xl"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.5 }}
+                    transition={{ delay: .2, duration: .6 }}
+                    variants={{
+                        hidden: {
+                            opacity: 0,
+                            y: 100
+                        },
+                        visible: {
+                            opacity: 1,
+                            y: 0
+                        }
+                    }}
+                >
                     <div className="flex gap-4 justify-center items-center">
                         tailwind
                         <SiTailwindcss className="w-6 h-6" />
@@ -63,8 +95,7 @@ const index = ({ setSelectedPage }: Props) => {
                         java
                         <FaJava className="w-6 h-6" />
                     </div>
-                </div>
-
+                </motion.div>
             </motion.div>
         </section>
     )

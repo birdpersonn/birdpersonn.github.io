@@ -61,7 +61,7 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
                                 setSelectedPage={setSelectedPage}
                             />
                             <button
-                                className="border-2 border-black shadow-opaque px-6 py-1 
+                                className="border-2 border-black shadow-opaque px-6 py-1 text-xl 
                                     transition duration-300 hover:shadow-none hover:text-black"
                             >
                                 Let's Connect!
@@ -88,6 +88,11 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
 
                     {/* MENU ITEMS */}
                     <div className="flex flex-col items-end justify-center m-4 gap-8 text-2xl">
+                        <Link
+                            page="Home"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                        />
                         <Link
                             page="Skills"
                             selectedPage={selectedPage}
