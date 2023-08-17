@@ -34,7 +34,7 @@ const index = ({ setSelectedPage }: Props) => {
                     className="w-11/12 md:w-2/5"
                 >
                     <h1
-                        className="font-semibold text-2xl md:text-3xl"
+                        className="font-semibold text-xl md:text-3xl"
                     >
                         const CHANEL = FrontendDev;
                     </h1>
