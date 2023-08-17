@@ -1,6 +1,7 @@
 import NavBar from "@/scenes/navBar";
 import Home from "@/scenes/home";
 import Skills from "@/scenes/skills";
+import Projects from "@/scenes/projects";
 import ContactMe from "@/scenes/contactMe";
 import { SelectedPage } from "./shared/types";
 import { useEffect, useState } from "react";
@@ -28,6 +29,7 @@ function App() {
       />
       <Home setSelectedPage={setSelectedPage} />
       <Skills setSelectedPage={setSelectedPage} />
+      <Projects setSelectedPage={setSelectedPage} />
       <ContactMe setSelectedPage={setSelectedPage} />
     </div>
   )
