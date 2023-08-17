@@ -7,7 +7,7 @@ type Props = {
 }
 
 const ContactMe = ({ setSelectedPage }: Props) => {
-    const inputStyles = `border-2 border-black p-2 w-11/12`;
+    const inputStyles = `border-2 border-black bg-purple-light p-2 w-11/12 text-purple-dark md:text-lg`;
 
     const {
         register,
@@ -25,7 +25,7 @@ const ContactMe = ({ setSelectedPage }: Props) => {
     return (
         <section
             id="contactme"
-            className="h-full pt-24 md:pt-12 flex justify-center items-center"
+            className="min-h-full pt-24 md:pt-12 flex justify-center items-center"
         >
             <motion.div
                 className="flex flex-col gap-4 justify-center items-center"
@@ -49,7 +49,7 @@ const ContactMe = ({ setSelectedPage }: Props) => {
                     }}
                 >
                     <form
-                        className="flex flex-col gap-6 py-4 justify-center items-center align-center border-2 border-black shadow-opaque"
+                        className="flex flex-col bg-white gap-6 py-4 mb-6 justify-center items-center align-center border-2 border-black shadow-opaque"
                         target="_blank"
                         onSubmit={onSubmit}
                         action="https://formsubmit.co/be0a2bf19d66f90579aab6bf033a8dd2"
@@ -65,7 +65,7 @@ const ContactMe = ({ setSelectedPage }: Props) => {
                             })}
                         />
                         {errors.name && (
-                            <p className=" text-primary-500">
+                            <p className="text-accent-orange">
                                 {errors.name.type === "required" && "This field is required."}
                                 {errors.name.type === "maxLength" && "Max length is 100 characters."}
                             </p>
@@ -81,7 +81,7 @@ const ContactMe = ({ setSelectedPage }: Props) => {
                             })}
                         />
                         {errors.email && (
-                            <p className=" text-primary-500">
+                            <p className="text-accent-orange">
                                 {errors.email.type === "required" && "This field is required."}
                                 {errors.email.type === "pattern" && "Invalid email address."}
                             </p>
@@ -98,7 +98,7 @@ const ContactMe = ({ setSelectedPage }: Props) => {
                             })}
                         />
                         {errors.message && (
-                            <p className=" text-primary-500">
+                            <p className="text-accent-orange">
                                 {errors.message.type === "required" && "This field is required."}
                                 {errors.message.type === "maxLength" && "Max length is 2000 characters."}
                             </p>
@@ -106,7 +106,7 @@ const ContactMe = ({ setSelectedPage }: Props) => {
 
                         <button
                             type="submit"
-                            className="py-3 font-semibold text-xl pb-6 transition duration-500 hover:text-white"
+                            className="p-3 font-semibold text-xl border-2 border-transparent transition duration-500 hover:border-black hover:shadow-opaque"
                         >
                             SUBMIT
                         </button>
