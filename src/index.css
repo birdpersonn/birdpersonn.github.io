@@ -7,9 +7,11 @@ html,
 body,
 #root,
 .app {
+    margin: 0px;
+    padding: 0px;
     height: 100%;
     width: 100%;
-    background-color: #fff;
     font-family: 'Bricolage Grotesque', sans-serif;
     @apply text-purple-dark;
+    @apply bg-cat-purple;
 }

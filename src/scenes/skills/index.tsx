@@ -12,30 +12,15 @@ const index = ({ setSelectedPage }: Props) => {
     return (
         <section
             id="skills"
-            className="mx-auto min-h-full justify-center items-center flex flex-col bg-cat-purple 
-                pt-28 md:pt-0 gap-10"
+            className="h-full pt-32 md:pt-0 flex flex-col items-center justify-center bg-cat-purple gap-4"
         >
-            <h1 className="self-center text-4xl font-semibold">SKILLS</h1>
+            <h1 className="text-center text-4xl font-semibold">SKILLS</h1>
             <motion.div
-                className="flex w-full flex-col md:flex-row justify-center gap-16 items-center"
+                className="flex w-full flex-col md:flex-row gap-6 items-center justify-center"
                 onViewportEnter={() => setSelectedPage(SelectedPage.Skills)}
             >
                 <motion.div
-                    className="flex flex-col border-2 w-3/4 md:w-1/4 border-black p-4 bg-white text-4xl justify-center items-start"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: false, amount: 0.5 }}
-                    transition={{ duration: .6 }}
-                    variants={{
-                        hidden: {
-                            opacity: 0,
-                            x: -100
-                        },
-                        visible: {
-                            opacity: 1,
-                            x: 0
-                        }
-                    }}
+                    className="border-2 border-black p-4 bg-white text-4xl w-5/6 md:w-1/4"
                 >
                     <div className="flex gap-4 justify-center items-center">
                         <SiJavascript className="w-6 h-6" />
@@ -59,21 +44,8 @@ const index = ({ setSelectedPage }: Props) => {
                     </div>
                 </motion.div>
                 <motion.div
-                    className="flex flex-col justify-center w-3/4 md:w-1/4 items-end border-2 border-black p-4 bg-white text-4xl"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: false, amount: 0.1 }}
-                    transition={{ duration: .6 }}
-                    variants={{
-                        hidden: {
-                            opacity: 0,
-                            x: 100
-                        },
-                        visible: {
-                            opacity: 1,
-                            x: 0
-                        }
-                    }}
+                    className="border-2 border-black p-4 bg-white text-4xl w-5/6 md:w-1/4"
+
                 >
                     <div className="flex gap-4 justify-center items-center">
                         tailwind

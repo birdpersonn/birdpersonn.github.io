@@ -10,36 +10,22 @@ const index = ({ setSelectedPage }: Props) => {
     return (
         <section
             id="home"
-            className="flex bg-cat-purple pt-28 md:py-0 md:h-full"
+            className="pt-32 md:pt-0 md:h-full flex justify-center items-center"
         >
             <motion.div
-                className="flex flex-col md:flex-row justify-center items-center align-middle"
+                className="flex flex-col md:flex-row gap-8 justify-center items-center"
                 onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
             >
-                <motion.div
-                    className="flex flex-col justify-center items-center md:w-2/5 mx-12"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: false, amount: 0.5 }}
-                    transition={{ duration: 0.6 }}
-                    variants={{
-                        hidden: {
-                            opacity: 0,
-                            y: -50
-                        },
-                        visible: {
-                            opacity: 1,
-                            y: 0
-                        }
-                    }}
+                <div
+                    className="w-11/12 md:w-2/5"
                 >
                     <h1
-                        className="self-start font-extrabold text-3xl"
+                        className="font-semibold text-2xl md:text-3xl"
                     >
                         const CHANEL = frontendDev
                     </h1>
                     <h2
-                        className="border-black border-2 p-6 bg-white text-lg"
+                        className="border-2 border-black shadow-opaque bg-white p-4"
                     >
                         hi, welcome! my name is chanel and i'm a life-long learner passionate about programming, art, and education.
                         although i enjoy exploring the endless ways to express myself through code
@@ -47,8 +33,8 @@ const index = ({ setSelectedPage }: Props) => {
                         web development, which utilizes both the creative and problem-solving sides
                         of my brain.
                     </h2>
-                </motion.div>
-                <img src={CatDevImage} alt="cat developer" className="w-[350px] h-[350px]" />
+                </div>
+                <img src={CatDevImage} alt="cat developer" className="w-4/5 md:w-[350px] md:h-[350px]" />
             </motion.div>
         </section>
     )
