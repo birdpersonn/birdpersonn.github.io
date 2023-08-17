@@ -15,6 +15,20 @@ const index = ({ setSelectedPage }: Props) => {
             <motion.div
                 className="flex flex-col md:flex-row gap-8 justify-center items-center"
                 onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.5 }}
+                transition={{ duration: .8 }}
+                variants={{
+                    hidden: {
+                        opacity: 0,
+                        y: -50
+                    },
+                    visible: {
+                        opacity: 1,
+                        y: 0
+                    }
+                }}
             >
                 <div
                     className="w-11/12 md:w-2/5"
