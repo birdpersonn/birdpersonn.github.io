@@ -1,14 +1,17 @@
 import { SelectedPage } from '@/shared/types';
 import { motion } from 'framer-motion';
 import useProjectsArr from '@/hooks/useProjectsArr';
+import useMediaQuery from '@/hooks/useMediaQuery';
+import { AiOutlineLeftSquare, AiOutlineRightSquare } from "react-icons/ai";
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
 }
 
 const Projects = ({ setSelectedPage }: Props) => {
-    const desktopStyles = "border-2 border-black shadow-opaque w-[85vw] md:w-[50vw]";
-    const mobileStyles = "border-2 border-black shadow-opaque w-[20vw] md:w-[10vw] absolute left-[77vw] md:left-[70vw]";
+    const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+    const desktopStyles = "border-2 border-black shadow-opaque w-[85vw] md:w-4/5 object-cover";
+    const mobileStyles = "border-2 border-black shadow-opaque w-[20vw] md:w-[10vw] absolute left-[77vw] md:left-[69vw] object-cover";
     const { currentProject, pageNext, pagePrev } = useProjectsArr();
 
     return (
@@ -17,11 +20,18 @@ const Projects = ({ setSelectedPage }: Props) => {
             className='min-h-full pt-32 md:pt-12 flex flex-col items-center justify-center'
         >
             <motion.div
+                className='w-4/5 flex flex-col md:flex-row justify-center items-center'
                 onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
             >
+                {/* DESKTOP PREV PROJ ARROW */}
+                {isAboveMediumScreens && (
+                    <button onClick={pagePrev}>
+                        <AiOutlineLeftSquare className="w-12 h-12 text-black hover:text-purple-dark" />
+                    </button>
+                )}
                 {/* PROJECT */}
                 <div
-                    className='flex flex-col justify-center items-center gap-4'
+                    className='w-full flex flex-col justify-center items-center gap-4 md:pr-8'
                 >
                     {/* PROJECT TITLE */}
                     <h1 className='text-3xl font-semibold md:text-4xl'>
@@ -29,13 +39,13 @@ const Projects = ({ setSelectedPage }: Props) => {
                     </h1>
 
                     {/* SKILLS ICONS */}
-                    <div className='flex text-xl gap-2'>
+                    <div className='flex text-lg font-thin gap-2 text-black '>
                         {currentProject.icons.map((icon) => { return icon })}
                     </div>
 
                     {/* IMAGES */}
                     <div
-                        className='flex flex-col md:flex-row justify-center items-center gap-8'
+                        className='w-full flex flex-col md:flex-row justify-center items-center'
                     >
                         <motion.img
                             className={desktopStyles}
@@ -48,21 +58,27 @@ const Projects = ({ setSelectedPage }: Props) => {
                     </div>
 
                     {/* LINKS */}
+
                 </div>
 
-                {/* BUTTONS */}
-                <div className='flex gap-4 justify-center items-center pt-8'>
-                    <button
-                        onClick={pagePrev}
-                    >
-                        {'<'}
+                {/* DESKTOP NEXT PROJ ARROW */}
+                {isAboveMediumScreens && (
+                    <button onClick={pageNext}>
+                        <AiOutlineRightSquare className="w-12 h-12 text-black hover:text-purple-dark" />
                     </button>
-                    <button
-                        onClick={pageNext}
-                    >
-                        {'>'}
-                    </button>
-                </div>
+                )}
+
+                {/* MOBILE PREV/NEXT PROJ ARROWS */}
+                {!isAboveMediumScreens && (
+                    <div className='flex gap-12 justify-center items-center pt-10 text-black'>
+                        <button onClick={pagePrev}>
+                            <AiOutlineLeftSquare className="w-12 h-12" />
+                        </button>
+                        <button onClick={pageNext}>
+                            <AiOutlineRightSquare className="w-12 h-12" />
+                        </button>
+                    </div>
+                )}
             </motion.div>
         </section>
     )

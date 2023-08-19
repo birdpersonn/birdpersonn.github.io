@@ -14,7 +14,7 @@ const index = ({ setSelectedPage }: Props) => {
             id="skills"
             className="h-full pt-32 md:pt-0 flex flex-col items-center justify-center bg-cat-purple gap-4"
         >
-            <h1 className="text-center text-4xl font-semibold">SKILLS</h1>
+            <h1 className="text-4xl font-semibold">SKILLS</h1>
             <motion.div
                 className="flex w-full flex-col md:flex-row gap-6 items-center justify-center"
                 onViewportEnter={() => setSelectedPage(SelectedPage.Skills)}

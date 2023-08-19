@@ -8,9 +8,6 @@ import {
 import PilatesDesktop from '@/assets/PilatesDesktop.webp';
 import PilatesMobile from '@/assets/PilatesMobile.webp';
 
-import Test1 from '@/assets/test1.jpg';
-import Test2 from '@/assets/test2.webp';
-
 const index = [
     {
         title: "Pilates Gym",
