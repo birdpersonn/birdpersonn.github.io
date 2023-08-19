@@ -17,10 +17,10 @@ const Projects = ({ setSelectedPage }: Props) => {
     return (
         <section
             id="projects"
-            className='min-h-full pt-32 md:pt-12 flex flex-col items-center justify-center'
+            className='min-h-full pt-18 md:pt-12 flex flex-col items-center justify-center'
         >
             <motion.div
-                className='w-4/5 flex flex-col md:flex-row justify-center items-center'
+                className='md:w-4/5 h-5/6 flex flex-col md:flex-row justify-center items-center'
                 onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
             >
                 {/* DESKTOP PREV PROJ ARROW */}
@@ -48,10 +48,40 @@ const Projects = ({ setSelectedPage }: Props) => {
                         className='w-full flex flex-col md:flex-row justify-center items-center'
                     >
                         <motion.img
+                            key={currentProject.desktopImg}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: false, amount: 0.5 }}
+                            transition={{ duration: .8 }}
+                            variants={{
+                                hidden: {
+                                    opacity: 0,
+                                    x: -20
+                                },
+                                visible: {
+                                    opacity: 1,
+                                    x: 0
+                                }
+                            }}
                             className={desktopStyles}
                             src={currentProject.desktopImg} alt={`${currentProject.title} desktop view`}
                         />
                         <motion.img
+                            key={currentProject.mobileImg}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: false, amount: 0.5 }}
+                            transition={{ duration: .8 }}
+                            variants={{
+                                hidden: {
+                                    opacity: 0,
+                                    x: 10
+                                },
+                                visible: {
+                                    opacity: 1,
+                                    x: 0
+                                }
+                            }}
                             className={mobileStyles}
                             src={currentProject.mobileImg} alt={`${currentProject.title} mobile view`}
                         />
