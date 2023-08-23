@@ -59,7 +59,8 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
                             <a
                                 className="p-2 border-2 border-transparent transition duration-300 
                                     hover:border-black hover:shadow-opaque hover:text-black"
-                                href={Resume} target="_blank" >Resume</a>
+                                href={Resume} target="_blank" >Resume
+                            </a>
                             <AnchorLink
                                 className="border-2 border-black shadow-opaque p-2 text-xl 
                                     transition duration-300 hover:shadow-none hover:text-black"
@@ -105,16 +106,21 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                         />
-                        {/* <Link
+                        <Link
                             page="Experience"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
-                        /> */}
+                        />
                         <Link
                             page="Contact Me"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                         />
+                        <a
+                            className="p-2 text-lg border-2 border-transparent transition duration-300 
+                                    hover:border-black hover:shadow-opaque hover:text-black"
+                            href={Resume} target="_blank" >Resume
+                        </a>
                     </div>
                 </div>
             )}
