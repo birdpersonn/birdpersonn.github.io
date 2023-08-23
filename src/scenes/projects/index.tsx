@@ -90,22 +90,22 @@ const Projects = ({ setSelectedPage }: Props) => {
                     </div>
 
                     {/* LINKS */}
-                    <div className='flex justify-center items-center gap-4'>
-                        <a href={currentProject.demoLink} target='_blank' className={linkStyles}>DEMO</a>
-                        <a href={currentProject.codeLink} target='_blank' className={linkStyles}>CODE</a>
-                    </div>
 
-                    {/* MOBILE PREV/NEXT PROJ ARROWS */}
-                    {!isAboveMediumScreens && (
-                        <div className='w-full flex justify-between items-center'>
+                    <div className='flex justify-center items-center gap-4'>
+                        {/* MOBILE PREV PROJ ARROWS */}
+                        {!isAboveMediumScreens && (
                             <button onClick={pagePrev}>
                                 <AiOutlineLeft className={arrowStyles} />
                             </button>
-                            <button onClick={pageNext}>
-                                <AiOutlineRight className={arrowStyles} />
-                            </button>
-                        </div>
-                    )}
+
+                        )}
+                        <a href={currentProject.demoLink} target='_blank' className={linkStyles}>DEMO</a>
+                        <a href={currentProject.codeLink} target='_blank' className={linkStyles}>CODE</a>
+                        {/* MOBILE PREV/NEXT PROJ ARROWS */}
+                        {!isAboveMediumScreens && (<button onClick={pageNext}>
+                            <AiOutlineRight className={arrowStyles} />
+                        </button>)}
+                    </div>
                 </div>
 
                 {/* DESKTOP NEXT PROJ ARROW */}
@@ -115,7 +115,7 @@ const Projects = ({ setSelectedPage }: Props) => {
                     </button>
                 )}
             </motion.div>
-        </section>
+        </section >
     )
 }
 
