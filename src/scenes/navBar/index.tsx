@@ -4,6 +4,7 @@ import Link from "./Link";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { HiMenu, HiX } from "react-icons/hi";
 import { useState } from "react";
+import Resume from '@/assets/ChanelCarpenter-FrontendDeveloper.pdf';
 
 type Props = {
     selectedPage: SelectedPage;
@@ -55,11 +56,10 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
 
                         {/* CTA */}
                         <div className="flex justify-between items-center gap-8">
-                            <Link
-                                page="Resume"
-                                selectedPage={selectedPage}
-                                setSelectedPage={setSelectedPage}
-                            />
+                            <a
+                                className="p-2 border-2 border-transparent transition duration-300 
+                                    hover:border-black hover:shadow-opaque hover:text-black"
+                                href={Resume} target="_blank" >Resume</a>
                             <AnchorLink
                                 className="border-2 border-black shadow-opaque p-2 text-xl 
                                     transition duration-300 hover:shadow-none hover:text-black"

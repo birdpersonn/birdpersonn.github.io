@@ -45,7 +45,7 @@ const ContactMe = ({ setSelectedPage }: Props) => {
                     }
                 }}
             >
-                <h1 className="text-4xl font-semibold">CONTACT ME</h1>
+                <h1 className="text-4xl font-semibold text-black">CONTACT ME</h1>
 
                 <form
                     className="flex flex-col bg-white gap-6 py-4 mb-6 justify-center items-center border-2 border-black shadow-opaque"
