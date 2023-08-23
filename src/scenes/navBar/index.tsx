@@ -46,11 +46,11 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
                             />
-                            <Link
+                            {/* <Link
                                 page="Experience"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
-                            />
+                            /> */}
                         </div>
 
                         {/* CTA */}
@@ -105,11 +105,11 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                         />
-                        <Link
+                        {/* <Link
                             page="Experience"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
-                        />
+                        /> */}
                         <Link
                             page="Contact Me"
                             selectedPage={selectedPage}
