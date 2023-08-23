@@ -22,7 +22,7 @@ import RPSMobile from '@/assets/RockPaperScissorsMobile.png';
 
 const index = [
     {
-        title: "Pilates Gym",
+        title: "Yoga Gym",
         demoLink: "https://pilates-site.pages.dev/",
         codeLink: "https://github.com/birdpersonn/pilates-site",
         desktopImg: PilatesDesktop,
@@ -49,7 +49,7 @@ const index = [
     {
         title: "Portfolio",
         demoLink: "https://birdpersonn.github.io/library/",
-        codeLink: "https://github.com/birdpersonn/library",
+        codeLink: "https://github.com/birdpersonn/birdpersonn.github.io",
         desktopImg: PortfolioDesktop,
         mobileImg: PortfolioMobile,
         icons: [
