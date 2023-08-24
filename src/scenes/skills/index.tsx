@@ -12,7 +12,7 @@ const index = ({ setSelectedPage }: Props) => {
     return (
         <section
             id="skills"
-            className="h-full pt-32 md:pt-0 flex flex-col items-center justify-center bg-cat-purple gap-4"
+            className="h-full pt-20 md:pt-0 flex flex-col items-center justify-center bg-cat-purple gap-4"
         >
             <h1 className="text-4xl font-semibold text-black">SKILLS</h1>
             <motion.div

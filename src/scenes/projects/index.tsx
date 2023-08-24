@@ -18,12 +18,13 @@ const Projects = ({ setSelectedPage }: Props) => {
     return (
         <section
             id="projects"
-            className='min-h-full pt-18 md:pt-12 flex flex-col items-center justify-center'
+            className='min-h-full pt-18 md:pt-24 flex flex-col items-center justify-center'
         >
             <motion.div
                 className='md:w-4/5 h-5/6 flex flex-col md:flex-row justify-center items-center'
                 onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
             >
+
                 {/* DESKTOP PREV PROJ ARROW */}
                 {isAboveMediumScreens && (
                     <button onClick={pagePrev}>
@@ -35,6 +36,7 @@ const Projects = ({ setSelectedPage }: Props) => {
                     className='w-full flex flex-col justify-center items-center gap-4 md:pr-8'
                 >
                     {/* PROJECT TITLE */}
+                    <h1 className="text-4xl font-semibold text-black">PROJECTS</h1>
                     <h1 className='text-3xl font-semibold md:text-4xl'>
                         {currentProject.title}
                     </h1>
